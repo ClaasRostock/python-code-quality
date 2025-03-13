@@ -1,66 +1,181 @@
-# python_code_quality
-python_code_quality is an example package containing demo code for the
-Python Code Quality talk.
+[![pypi](https://img.shields.io/pypi/v/python-code-quality.svg?color=blue)](https://pypi.python.org/pypi/python-code-quality)
+[![versions](https://img.shields.io/pypi/pyversions/python-code-quality.svg?color=blue)](https://pypi.python.org/pypi/python-code-quality)
+[![license](https://img.shields.io/pypi/l/python-code-quality.svg)](https://github.com/ClaasRostock/python-code-quality/blob/main/LICENSE)
+![ci](https://img.shields.io/github/actions/workflow/status/ClaasRostock/python-code-quality/.github%2Fworkflows%2Fnightly_build.yml?label=ci)
+[![docs](https://img.shields.io/github/actions/workflow/status/ClaasRostock/python-code-quality/.github%2Fworkflows%2Fpush_to_release.yml?label=docs)][python_code_quality_docs]
+
+# python-code-quality
+python-code-quality is an example package containing demo code for the Python Code Quality talk.
+
+
+## Installation
+
+```sh
+pip install python-code-quality
+```
+
+## Usage Example
+
+API:
+
+```py
+from python_code_quality import ...
+```
+
+CLI:
+
+```sh
+python-code-quality ...
+```
+
+_For more examples and usage, please refer to python-code-quality's [documentation][python_code_quality_docs]._
+
 
 ## Development Setup
 
-1. Install Python 3.9 or higher, i.e. [Python 3.9](https://www.python.org/downloads/release/python-3912/) or [Python 3.10](https://www.python.org/downloads/release/python-3104/)
+### 1. Install uv
+This project uses `uv` as package manager.
+If you haven't already, install [uv](https://docs.astral.sh/uv), preferably using it's ["Standalone installer"](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_2) method: <br>
+..on Windows:
+```sh
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+..on MacOS and Linux:
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+(see [docs.astral.sh/uv](https://docs.astral.sh/uv/getting-started/installation/) for all / alternative installation methods.)
 
-2. Update pip and setuptools:
+Once installed, you can update `uv` to its latest version, anytime, by running:
+```sh
+uv self update
+```
 
-    ~~~sh
-    $ python -m pip install --upgrade pip setuptools
-    ~~~
+### 2. Install Python
+This project requires Python 3.10 or later. <br>
+If you don't already have a compatible version installed on your machine, the probably most comfortable way to install Python is through `uv`:
+```sh
+uv python install
+```
+This will install the latest stable version of Python into the uv Python directory, i.e. as a uv-managed version of Python.
 
-3. git clone the python_code_quality repository into your local development directory:
+Alternatively, and if you want a standalone version of Python on your machine, you can install Python either via `winget`:
+```sh
+winget install --id Python.Python
+```
+or you can download and install Python from the [python.org](https://www.python.org/downloads/) website.
 
-    ~~~sh
-    git clone https://github.com/ClaasRostock/python_code_quality path/to/your/dev/python_code_quality
-    ~~~
+### 3. Clone the repository
+Clone the python-code-quality repository into your local development directory:
+```sh
+git clone https://github.com/ClaasRostock/python-code-quality path/to/your/dev/python-code-quality
+```
+Change into the project directory after cloning:
+```sh
+cd python-code-quality
+```
 
-4. In the python_code_quality root folder:
+### 4. Install dependencies
+Run `uv sync` to create a virtual environment and install all project dependencies into it:
+```sh
+uv sync
+```
+> **Note**: Using `--no-dev` will omit installing development dependencies.
 
-    Create a Python virtual environment:
-    ~~~sh
-    $ python -m venv .venv
-    ~~~
-    Activate the virtual environment: <br>
-    ..on Windows:
-    ~~~sh
-    > .venv\Scripts\activate.bat
-    ~~~
-    ..on Linux:
-    ~~~sh
-    $ source .venv/bin/activate
-    ~~~
-    Update pip and setuptools:
-    ~~~sh
-    $ python -m pip install --upgrade pip setuptools
-    ~~~
-    Install python_code_quality's dependencies:
-    ~~~sh
-    $ pip install -r requirements-dev.txt
-    ~~~
+> **Note**: `uv` will create a new virtual environment called `.venv` in the project root directory when running
+> `uv sync` the first time. Optionally, you can create your own virtual environment using e.g. `uv venv`, before running
+> `uv sync`.
+
+### 5. (Optional) Install CUDA support
+Run `uv sync` with option `--extra cuda` to in addition install torch with CUDA support:
+```sh
+uv sync --extra cuda
+```
+
+Alternatively, you can manually install torch with CUDA support.
+_Note 1_: Do this preferably _after_ running `uv sync`. That way you ensure a virtual environment exists, which is a prerequisite before you install torch with CUDA support using below `uv pip install` command.
+
+To manually install torch with CUDA support, generate a `uv pip install` command matching your local machine's operating system using the wizard on the official [PyTorch website](https://pytorch.org/get-started/locally/).
+_Note_: As we use `uv` as package manager, remember to replace `pip` in the command generated by the wizard with `uv pip`.
+
+If you are on Windows, the resulting `uv pip install` command will most likely look something like this:
+```sh
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+```
+
+_Hint:_ If you are unsure which cuda version to indicate in above `uv pip install .. /cuXXX` command, you can use the shell command `nvidia-smi` on your local system to find out the cuda version supported by the current graphics driver installed on your system. When then generating the `uv pip install` command with the wizard from the [PyTorch website](https://pytorch.org/get-started/locally/), select the cuda version that matches the major version of what your graphics driver supports (major version must match, minor version may deviate).
+
+
+### 6. (Optional) Activate the virtual environment
+When using `uv`, there is in almost all cases no longer a need to manually activate the virtual environment. <br>
+`uv` will find the `.venv` virtual environment in the working directory or any parent directory, and activate it on the fly whenever you run a command via `uv` inside your project folder structure:
+```sh
+uv run <command>
+```
+
+However, you still _can_ manually activate the virtual environment if needed.
+When developing in an IDE, for instance, this can in some cases be necessary depending on your IDE settings.
+To manually activate the virtual environment, run one of the "known" legacy commands: <br>
+..on Windows:
+```sh
+.venv\Scripts\activate.bat
+```
+..on Linux:
+```sh
+source .venv/bin/activate
+```
+
+### 7. Install pre-commit hooks
+The `.pre-commit-config.yaml` file in the project root directory contains a configuration for pre-commit hooks.
+To install the pre-commit hooks defined therein in your local git repository, run:
+```sh
+uv run pre-commit install
+```
+
+All pre-commit hooks configured in `.pre-commit-config.yaml` will now run each time you commit changes.
+
+pre-commit can also manually be invoked, at anytime, using:
+```sh
+uv run pre-commit run --all-files
+```
+
+To skip the pre-commit validation on commits (e.g. when intentionally committing broken code), run:
+```sh
+uv run git commit -m <MSG> --no-verify
+```
+
+To update the hooks configured in `.pre-commit-config.yaml` to their newest versions, run:
+```sh
+uv run pre-commit autoupdate
+```
+
+### 8. Test that the installation works
+To test that the installation works, run pytest in the project root folder:
+```sh
+uv run pytest
+```
 
 ## Meta
 
-Copyright (c) 2023 [Claas Rostock](https://github.com/ClaasRostock)
+Copyright (c) 2025 [Claas Rostock](https://github.com/ClaasRostock)
 
-Claas Rostock – [@LinkedIn](https://www.linkedin.com/in/claasrostock/?locale=en_US) – claas.rostock@dnv.com
+Claas Rostock - [@LinkedIn](https://www.linkedin.com/in/claasrostock/?locale=en_US) - claas.rostock@dnv.com
 
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/ClaasRostock/python_code_quality](https://github.com/ClaasRostock/python_code_quality)
+[https://github.com/ClaasRostock/](https://github.com/ClaasRostock/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/ClaasRostock/python_code_quality/fork>)
-2. Create your branch (`git checkout -b myBranchName`)
-3. Commit your changes (`git commit -am 'place your commit message here'`)
-4. Push to the branch (`git push origin myBranchName`)
-5. Create a new Pull Request
+1. Fork it (<https://github.com/ClaasRostock/python-code-quality/fork>)
+2. Create an issue in your GitHub repo
+3. Create your branch based on the issue number and type (`git checkout -b issue-name`)
+4. Evaluate and stage the changes you want to commit (`git add -i`)
+5. Commit your changes (`git commit -am 'place a descriptive commit message here'`)
+6. Push to the branch (`git push origin issue-name`)
+7. Create a new Pull Request in GitHub
 
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
 
 <!-- Markdown link & img dfn's -->
-[python_code_quality_docs]: https://github.com/ClaasRostock/python_code_quality/README.html
+[python_code_quality_docs]: https://ClaasRostock.github.io/python-code-quality/README.html

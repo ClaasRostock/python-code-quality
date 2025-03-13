@@ -5,41 +5,52 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Unit Test",
-            "type": "python",
-            "request": "test",
-            "justMyCode": false,
+            "name": "Python: Debug Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "purpose": [
+                "debug-test"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTEST_ADDOPTS": "--no-cov"
+            },
+            "autoReload": {
+                "enable": true
+            },
+            "justMyCode": true,
         },
         {
-            "name": "Python: Current File",
-            "type": "python",
+            "name": "Python: Current File, cwd = file dir",
+            "type": "debugpy",
             "request": "launch",
-            "cwd": "${fileDirname}",
+            "cwd": "${fileDirname}", // working dir = dir where current file is
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
             "autoReload": {
                 "enable": true
-            }
+            },
         },
         {
             "name": "Python: Current File, cwd = workspace root folder",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}", // working dir = workspace root folder
             "program": "${file}",
             "console": "integratedTerminal",
             "autoReload": {
                 "enable": true
             },
-            "justMyCode": false,
+            "justMyCode": true,
         },
         {
-            "name": "mypackage test_cli",
-            "type": "python",
+            "name": "python_code_quality test_cli",
+            "type": "debugpy",
             "request": "launch",
             "cwd": "${workspaceFolder}\\tests",
-            "program": "${workspaceFolder}\\src\\mypackage\\cli\\mypackage.py",
+            "program": "${workspaceFolder}\\src\\python_code_quality\\cli\\python_code_quality.py",
             "args": [
                 "test_config_file",
                 "--run",
@@ -49,7 +60,7 @@
             "autoReload": {
                 "enable": true
             },
-            "justMyCode": false,
+            "justMyCode": true,
         },
     ]
 }

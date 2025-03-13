@@ -1,0 +1,13 @@
+[paths]
+source =
+    src/python_code_quality
+    */site-packages/python_code_quality
+
+[run]
+source = python_code_quality
+branch = True
+
+[report]
+fail_under = 10.0
+show_missing = True
+skip_covered = True

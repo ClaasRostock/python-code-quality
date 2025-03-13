@@ -1,0 +1,18 @@
+from demo_duck_typing import print_name
+
+import os
+print_name(os)
+
+from pathlib import Path
+cwd = Path.cwd()
+print(cwd)
+
+print_name(cwd)
+
+a = 1.23
+print(a)
+
+type(a)
+
+print_name(a)
+

@@ -1,7 +1,7 @@
-API Documentation
-=================
+API Reference
+=============
 
 .. toctree::
    :maxdepth: 4
 
-   mypackage
+   python_code_quality

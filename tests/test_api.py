@@ -2,20 +2,19 @@
 from pathlib import Path
 
 import pytest
-from pytest import LogCaptureFixture
 
-from mypackage.api import MyPackageProcess, run
+from python_code_quality.api import MyPackageProcess, run
 
 
-def test_file_not_found_exception():
+def test_file_not_found_exception() -> None:
     # Prepare
     config_file = Path("this_file_does_not_exist")
     # Execute and Assert
     with pytest.raises(FileNotFoundError):
-        _ = run(config_file)
+        run(config_file)
 
 
-def test_run():
+def test_run() -> None:
     # Prepare
     config_file = Path("test_config_file")
     # Execute
@@ -24,11 +23,11 @@ def test_run():
     # (nothin to assert. Assertion is that no exception is thrown.)
 
 
-def test_run_with_option(caplog: LogCaptureFixture):
+def test_run_with_option(caplog: pytest.LogCaptureFixture) -> None:
     # Prepare
     config_file = Path("test_config_file")
     log_level_expected = "INFO"
-    log_message_expected = "option is True. mypackage process will do something differently."
+    log_message_expected = "option is True. python-code-quality process will do something differently."
     caplog.clear()
     # Execute
     run(config_file=config_file, option=True)
@@ -39,7 +38,7 @@ def test_run_with_option(caplog: LogCaptureFixture):
 
 
 class TestMyPackageProcess:
-    def test_init(self):
+    def test_init(self) -> None:
         # Prepare
         config_file = Path("test_config_file.json")
         # Execute
@@ -50,7 +49,7 @@ class TestMyPackageProcess:
         assert process.run_number == 0
         assert process.terminate is False
 
-    def test_init_with_empty_config_file(self):
+    def test_init_with_empty_config_file(self) -> None:
         # sourcery skip: class-extract-method
         # Prepare
         config_file = Path("test_config_file_empty.json")
@@ -67,4 +66,3 @@ class TestMyPackageProcess:
 @pytest.mark.skip(reason="To be implemented")
 def test_example_skip():
     """Example of a test skipped because it is not yet implemented."""
-    pass
