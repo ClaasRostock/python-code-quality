@@ -1,25 +1,23 @@
 mypackage package
-=================
-
-.. automodule:: mypackage
-   :members:
-   :undoc-members:
-   :show-inheritance:
+==================
 
 Subpackages
 -----------
 
-.. toctree::
-   :maxdepth: 4
+.. autosummary::
+   :toctree: _autosummary
+   :template: custom-module.rst
+   :recursive:
 
-   mypackage.subpackage1
-   mypackage.subpackage2
    mypackage.utils
 
-Submodules
-----------
 
-.. toctree::
-   :maxdepth: 4
+Modules
+-------
+
+.. autosummary::
+   :toctree: _autosummary
+   :template: custom-module.rst
+   :recursive:
 
    mypackage.api
