@@ -1,22 +1,21 @@
+"""mypackage API."""
+
 import logging
 import os
 from pathlib import Path
-from typing import Union
 
 from dictIO import DictReader
 
-from mypackage.subpackage1.module1 import int_to_str
-from mypackage.subpackage2.module2 import str_to_int
-
-__ALL__ = ["run_mypackage", "MyPackageProcess"]
+__ALL__ = ["run", "MyPackageProcess"]
 
 logger = logging.getLogger(__name__)
 
 
 def run(
-    config_file: Union[str, os.PathLike[str]],
+    config_file: str | os.PathLike[str],
+    *,
     option: bool = False,
-):
+) -> None:
     """Run the mypackage process.
 
     Run the mypackage process and .. (long description).
@@ -33,13 +32,12 @@ def run(
     FileNotFoundError
         if config_file does not exist
     """
-
     # Make sure config_file argument is of type Path. If not, cast it to Path type.
     config_file = config_file if isinstance(config_file, Path) else Path(config_file)
 
     # Check whether config file exists
     if not config_file.exists():
-        logger.error(f"run_mypackage: File {config_file} not found.")
+        logger.error(f"run: File {config_file} not found.")
         raise FileNotFoundError(config_file)
 
     if option:
@@ -52,10 +50,12 @@ def run(
 
 
 class MyPackageProcess:
+    """Top level class encapsulating the mypackage process."""
+
     def __init__(
         self,
         config_file: Path,
-    ):
+    ) -> None:
         self.config_file: Path = config_file
         self._run_number: int = 0
         self._max_number_of_runs: int = 1
@@ -63,12 +63,11 @@ class MyPackageProcess:
         self._read_config_file()
         return
 
-    def run(self):
+    def run(self) -> None:
         """Run the mypackage process.
 
         Runs the mypackage process in a self-terminated loop.
         """
-
         # Run mypackage process until termination is flagged
         while not self.terminate:
             self._run_process()
@@ -82,13 +81,15 @@ class MyPackageProcess:
 
     @property
     def max_number_of_runs(self) -> int:
-        """Example for a read/write property implemented through a pair of explicit
+        """Getter method.
+
+        Example for a read/write property implemented through a pair of explicit
         getter and setter methods (see below for the related setter method).
         """
         return self._max_number_of_runs
 
     @max_number_of_runs.setter
-    def max_number_of_runs(self, value: int):
+    def max_number_of_runs(self, value: int) -> None:
         """Setter method that belongs to above getter method.
 
         Note that implementing specific getter- and setter methods is in most cases not necessary.
@@ -103,11 +104,10 @@ class MyPackageProcess:
         and want be able to cancel or alter code execution, or write log messages whenever a property
         gets reads or written from outside.
         """
-
         self._max_number_of_runs = value
         return
 
-    def _run_process(self):
+    def _run_process(self) -> None:
         """Execute a single run of the mypackage process."""
         self._run_number += 1
 
@@ -122,7 +122,7 @@ class MyPackageProcess:
 
         return
 
-    def _read_config_file(self):
+    def _read_config_file(self) -> None:
         """Read config file."""
         config = DictReader.read(self.config_file)
         if "max_number_of_runs" in config:
@@ -145,7 +145,7 @@ def _do_cool_stuff(run_number: int) -> str:
     str
         the run number converted to string
     """
-    result: str = int_to_str(run_number)
+    result: str = str(run_number)
     return result
 
 
@@ -164,5 +164,5 @@ def _do_even_cooler_stuff(string: str) -> int:
     int
         the resulting integer
     """
-    result: int = str_to_int(string)
+    result: int = int(string)
     return result

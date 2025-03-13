@@ -1,10 +1,9 @@
 #!/usr/bin/env python
-# coding: utf-8
+"""mypackage command line interface."""
 
 import argparse
 import logging
 from pathlib import Path
-from typing import Union
 
 from mypackage.api import run
 from mypackage.utils.logging import configure_logging
@@ -77,12 +76,11 @@ def _argparser() -> argparse.ArgumentParser:
     return parser
 
 
-def main():
-    """Entry point for console script as configured in setup.cfg.
+def main() -> None:
+    """Entry point for console script as configured in pyproject.toml.
 
     Runs the command line interface and parses arguments and options entered on the console.
     """
-
     parser = _argparser()
     args = parser.parse_args()
 
@@ -93,7 +91,7 @@ def main():
         log_level_console = "ERROR" if args.quiet else log_level_console
         log_level_console = "INFO" if args.verbose else log_level_console
     # ..to file
-    log_file: Union[Path, None] = Path(args.log) if args.log else None
+    log_file: Path | None = Path(args.log) if args.log else None
     log_level_file: str = args.log_level
     configure_logging(log_level_console, log_file, log_level_file)
 
@@ -106,9 +104,7 @@ def main():
         return
 
     logger.info(
-        f"Start mypackage.py with following arguments:\n"
-        f"\t config_file: \t{config_file}\n"
-        f"\t option: \t\t\t{option}\n"
+        f"Start mypackage.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"
     )
 
     # Invoke API
