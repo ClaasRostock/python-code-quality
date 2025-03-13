@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
 only-include = [
-    "src/mypackage",
+    "src/python_code_quality",
     "tests",
     ".coveragerc",
     ".editorconfig",
@@ -20,7 +20,7 @@ only-include = [
 
 [tool.hatch.build.targets.wheel]
 packages = [
-    "src/mypackage",
+    "src/python_code_quality",
 ]
 
 [project]
@@ -62,11 +62,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/claasrostock/python-code-quality"
-Documentation = "https://claasrostock.github.io/python-code-quality/README.html"
-Repository = "https://github.com/claasrostock/python-code-quality.git"
-Issues = "https://github.com/claasrostock/python-code-quality/issues"
-Changelog = "https://github.com/claasrostock/python-code-quality/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/ClaasRostock/python-code-quality"
+Documentation = "https://ClaasRostock.github.io/python-code-quality/README.html"
+Repository = "https://github.com/ClaasRostock/python-code-quality.git"
+Issues = "https://github.com/ClaasRostock/python-code-quality/issues"
+Changelog = "https://github.com/ClaasRostock/python-code-quality/blob/main/CHANGELOG.md"
 
 
 [dependency-groups]
@@ -98,7 +98,7 @@ native-tls = true
 
 
 [project.scripts]
-mypackage = "mypackage.cli.__main__:main"
+python-code-quality = "python_code_quality.cli.__main__:main"
 
 
 [tool.mypy]
@@ -109,20 +109,19 @@ mypy_path = "stubs"
 files = [
     "src",
     "tests",
-    # "demos",
 ]
 exclude = [
-    "^src/mypackage/somewhere_deep_in_an_external_package.py",
-    "^src/mypackage/demo_type_hints_and_naming_01.py",
-    "^src/mypackage/demo_type_hints_and_naming.py",
-    "^src/mypackage/demo_duck_typing_01.py",
-    "^src/mypackage/demo_duck_typing.py",
-    "^src/mypackage/demo_comments_and_docstrings_01.py",
-    "^src/mypackage/demo_comments_and_docstrings_02.py",
-    "^src/mypackage/demo_comments_and_docstrings_03.py",
-    "^src/mypackage/demo_comments_and_docstrings.py",
-    "^src/mypackage/demo_dynamic_typing_01.py",
-    "^src/mypackage/demo_dynamic_typing.py",
+    "^src/python_code_quality/somewhere_deep_in_an_external_package.py",
+    "^src/python_code_quality/demo_type_hints_and_naming_01.py",
+    "^src/python_code_quality/demo_type_hints_and_naming.py",
+    "^src/python_code_quality/demo_duck_typing_01.py",
+    "^src/python_code_quality/demo_duck_typing.py",
+    "^src/python_code_quality/demo_comments_and_docstrings_01.py",
+    "^src/python_code_quality/demo_comments_and_docstrings_02.py",
+    "^src/python_code_quality/demo_comments_and_docstrings_03.py",
+    "^src/python_code_quality/demo_comments_and_docstrings.py",
+    "^src/python_code_quality/demo_dynamic_typing_01.py",
+    "^src/python_code_quality/demo_dynamic_typing.py",
 ]
 check_untyped_defs = true
 disable_error_code = [
@@ -136,18 +135,17 @@ stubPath = "stubs"
 include = [
     "src",
     "tests",
-    "demos",
 ]
 exclude = [
-    "src/mypackage/somewhere_deep_in_an_external_package.py",
-    "src/mypackage/demo_type_hints_and_naming_01.py",
-    "src/mypackage/demo_type_hints_and_naming.py",
-    "src/mypackage/demo_duck_typing_01.py",
-    "src/mypackage/demo_duck_typing.py",
-    "src/mypackage/demo_comments_and_docstrings_01.py",
-    "src/mypackage/demo_comments_and_docstrings_02.py",
-    "src/mypackage/demo_comments_and_docstrings_03.py",
-    "src/mypackage/demo_comments_and_docstrings.py",
+    "src/python_code_quality/somewhere_deep_in_an_external_package.py",
+    "src/python_code_quality/demo_type_hints_and_naming_01.py",
+    "src/python_code_quality/demo_type_hints_and_naming.py",
+    "src/python_code_quality/demo_duck_typing_01.py",
+    "src/python_code_quality/demo_duck_typing.py",
+    "src/python_code_quality/demo_comments_and_docstrings_01.py",
+    "src/python_code_quality/demo_comments_and_docstrings_02.py",
+    "src/python_code_quality/demo_comments_and_docstrings_03.py",
+    "src/python_code_quality/demo_comments_and_docstrings.py",
 ]
 
 typeCheckingMode = "basic"

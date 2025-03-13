@@ -1,10 +1,10 @@
 [paths]
 source =
-    src/mypackage
-    */site-packages/mypackage
+    src/python_code_quality
+    */site-packages/python_code_quality
 
 [run]
-source = mypackage
+source = python_code_quality
 branch = True
 
 [report]

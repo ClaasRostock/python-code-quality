@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-from mypackage.subpackage1.module1 import int_to_str
+from python_code_quality.subpackage1.module1 import int_to_str
 
 
 def test_int_to_str():

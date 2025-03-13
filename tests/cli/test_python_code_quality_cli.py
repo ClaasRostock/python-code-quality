@@ -6,15 +6,15 @@ from pathlib import Path
 
 import pytest
 
-from mypackage.cli import __main__
-from mypackage.cli.__main__ import _argparser, main
+from python_code_quality.cli import __main__
+from python_code_quality.cli.__main__ import _argparser, main
 
 # *****Test commandline interface (CLI)************************************************************
 
 
 @dataclass()
 class CliArgs:
-    # Expected default values for the CLI arguments when mypackage gets called via the commandline
+    # Expected default values for the CLI arguments when python-code-quality gets called via the commandline
     quiet: bool = False
     verbose: bool = False
     log: str | None = None
@@ -49,7 +49,7 @@ def test_cli(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage", *inputs])
+    monkeypatch.setattr(sys, "argv", ["python-code-quality", *inputs])
     parser = _argparser()
     # Execute
     if isinstance(expected, CliArgs):
@@ -111,7 +111,7 @@ def test_logging_configuration(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage", *inputs])
+    monkeypatch.setattr(sys, "argv", ["python-code-quality", *inputs])
     args: ConfigureLoggingArgs = ConfigureLoggingArgs()
 
     def fake_configure_logging(
@@ -175,7 +175,7 @@ def test_api_invokation(
     # sourcery skip: no-conditionals-in-tests
     # sourcery skip: no-loop-in-tests
     # Prepare
-    monkeypatch.setattr(sys, "argv", ["mypackage", *inputs])
+    monkeypatch.setattr(sys, "argv", ["python-code-quality", *inputs])
     args: ApiArgs = ApiArgs()
 
     def fake_run(

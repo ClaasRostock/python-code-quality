@@ -3,7 +3,7 @@ import contextlib
 
 import pytest
 
-from mypackage.subpackage2.module2 import str_to_int
+from python_code_quality.subpackage2.module2 import str_to_int
 
 
 @pytest.mark.parametrize(

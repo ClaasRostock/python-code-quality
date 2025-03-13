@@ -1,1 +1,0 @@
-"""mypackage - An example package."""

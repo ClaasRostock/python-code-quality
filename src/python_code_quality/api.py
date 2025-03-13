@@ -1,4 +1,4 @@
-"""mypackage API."""
+"""python_code_quality API."""
 
 import logging
 import os
@@ -16,14 +16,14 @@ def run(
     *,
     option: bool = False,
 ) -> None:
-    """Run the mypackage process.
+    """Run the python-code-quality process.
 
-    Run the mypackage process and .. (long description).
+    Run the python-code-quality process and .. (long description).
 
     Parameters
     ----------
     config_file : Union[str, os.PathLike[str]]
-        file containing the mypackage configuration
+        file containing the python-code-quality configuration
     option : bool, optional
         if True, does something differently, by default False
 
@@ -41,7 +41,7 @@ def run(
         raise FileNotFoundError(config_file)
 
     if option:
-        logger.info("option is True. mypackage process will do something differently.")
+        logger.info("option is True. python-code-quality process will do something differently.")
 
     process = MyPackageProcess(config_file)
     process.run()
@@ -50,7 +50,7 @@ def run(
 
 
 class MyPackageProcess:
-    """Top level class encapsulating the mypackage process."""
+    """Top level class encapsulating the python-code-quality process."""
 
     def __init__(
         self,
@@ -64,11 +64,11 @@ class MyPackageProcess:
         return
 
     def run(self) -> None:
-        """Run the mypackage process.
+        """Run the python-code-quality process.
 
-        Runs the mypackage process in a self-terminated loop.
+        Runs the python-code-quality process in a self-terminated loop.
         """
-        # Run mypackage process until termination is flagged
+        # Run python-code-quality process until termination is flagged
         while not self.terminate:
             self._run_process()
             self.terminate = self._run_number >= self._max_number_of_runs
@@ -108,7 +108,7 @@ class MyPackageProcess:
         return
 
     def _run_process(self) -> None:
-        """Execute a single run of the mypackage process."""
+        """Execute a single run of the python-code-quality process."""
         self._run_number += 1
 
         logger.info(f"Start run {self._run_number}")

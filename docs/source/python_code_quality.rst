@@ -1,4 +1,4 @@
-mypackage package
+python-code-quality package
 ==================
 
 Subpackages
@@ -9,9 +9,9 @@ Subpackages
    :template: custom-module.rst
    :recursive:
 
-   mypackage.subpackage1
-   mypackage.subpackage2
-   mypackage.utils
+   python_code_quality.subpackage1
+   python_code_quality.subpackage2
+   python_code_quality.utils
 
 
 Modules
@@ -22,4 +22,4 @@ Modules
    :template: custom-module.rst
    :recursive:
 
-   mypackage.api
+   python_code_quality.api

@@ -30,8 +30,8 @@ keywords:
     - Code
     - Quality
 license: MIT
-license-url: 'https://claasrostock.github.io/python-code-quality/LICENSE.html'
-url: 'https://claasrostock.github.io/python-code-quality/README.html'
-repository-code: 'https://github.com/claasrostock/python-code-quality'
+license-url: 'https://ClaasRostock.github.io/python-code-quality/LICENSE.html'
+url: 'https://ClaasRostock.github.io/python-code-quality/README.html'
+repository-code: 'https://github.com/ClaasRostock/python-code-quality'
 message: 'Please cite this software using these metadata.'
 cff-version: 1.2.0

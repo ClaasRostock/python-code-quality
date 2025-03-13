@@ -1,31 +1,31 @@
 #!/usr/bin/env python
-"""mypackage command line interface."""
+"""python-code-quality command line interface."""
 
 import argparse
 import logging
 from pathlib import Path
 
-from mypackage.api import run
-from mypackage.utils.logging import configure_logging
+from python_code_quality.api import run
+from python_code_quality.utils.logging import configure_logging
 
 logger = logging.getLogger(__name__)
 
 
 def _argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="mypackage",
+        prog="python-code-quality",
         usage="%(prog)s config_file [options [args]]",
-        epilog="_________________mypackage___________________",
+        epilog="_________________python-code-quality___________________",
         prefix_chars="-",
         add_help=True,
-        description=("mypackage config_file --option"),
+        description=("python-code-quality config_file --option"),
     )
 
     _ = parser.add_argument(
         "config_file",
         metavar="config_file",
         type=str,
-        help="name of the file containing the mypackage configuration.",
+        help="name of the file containing the python-code-quality configuration.",
     )
 
     _ = parser.add_argument(
@@ -98,13 +98,13 @@ def main() -> None:
     config_file: Path = Path(args.config_file)
     option: bool = args.option
 
-    # Check whether mypackage config file exists
+    # Check whether python-code-quality config file exists
     if not config_file.is_file():
-        logger.error(f"mypackage.py: File {config_file} not found.")
+        logger.error(f"python-code-quality.py: File {config_file} not found.")
         return
 
     logger.info(
-        f"Start mypackage.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"
+        f"Start python-code-quality.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"  # noqa: E501
     )
 
     # Invoke API

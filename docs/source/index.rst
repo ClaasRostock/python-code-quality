@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-python-code-quality: Demo code for the code quality in Python talk
-==================================================================
+python-code-quality Documentation
+=================================
 
 .. toctree::
    :maxdepth: 4

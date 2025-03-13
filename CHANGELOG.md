@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the [python_code_quality] project will be documented in this file.<br>
+All notable changes to the [python-code-quality] project will be documented in this file.<br>
 The changelog format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]

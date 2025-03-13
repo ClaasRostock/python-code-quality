@@ -1,8 +1,8 @@
 [![pypi](https://img.shields.io/pypi/v/python-code-quality.svg?color=blue)](https://pypi.python.org/pypi/python-code-quality)
 [![versions](https://img.shields.io/pypi/pyversions/python-code-quality.svg?color=blue)](https://pypi.python.org/pypi/python-code-quality)
-[![license](https://img.shields.io/pypi/l/python-code-quality.svg)](https://github.com/claasrostock/python-code-quality/blob/main/LICENSE)
-![ci](https://img.shields.io/github/actions/workflow/status/claasrostock/python-code-quality/.github%2Fworkflows%2Fnightly_build.yml?label=ci)
-[![docs](https://img.shields.io/github/actions/workflow/status/claasrostock/python-code-quality/.github%2Fworkflows%2Fpush_to_release.yml?label=docs)][python_code_quality_docs]
+[![license](https://img.shields.io/pypi/l/python-code-quality.svg)](https://github.com/ClaasRostock/python-code-quality/blob/main/LICENSE)
+![ci](https://img.shields.io/github/actions/workflow/status/ClaasRostock/python-code-quality/.github%2Fworkflows%2Fnightly_build.yml?label=ci)
+[![docs](https://img.shields.io/github/actions/workflow/status/ClaasRostock/python-code-quality/.github%2Fworkflows%2Fpush_to_release.yml?label=docs)][python_code_quality_docs]
 
 # python-code-quality
 python-code-quality is an example package containing demo code for the Python Code Quality talk.
@@ -19,13 +19,13 @@ pip install python-code-quality
 API:
 
 ```py
-from mypackage import ...
+from python_code_quality import ...
 ```
 
 CLI:
 
 ```sh
-mypackage ...
+python-code-quality ...
 ```
 
 _For more examples and usage, please refer to python-code-quality's [documentation][python_code_quality_docs]._
@@ -68,7 +68,7 @@ or you can download and install Python from the [python.org](https://www.python.
 ### 3. Clone the repository
 Clone the python-code-quality repository into your local development directory:
 ```sh
-git clone https://github.com/claasrostock/python-code-quality path/to/your/dev/python-code-quality
+git clone https://github.com/ClaasRostock/python-code-quality path/to/your/dev/python-code-quality
 ```
 Change into the project directory after cloning:
 ```sh
@@ -167,7 +167,7 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 
 ## Contributing
 
-1. Fork it (<https://github.com/ClaasRostock//fork>)
+1. Fork it (<https://github.com/ClaasRostock/python-code-quality/fork>)
 2. Create an issue in your GitHub repo
 3. Create your branch based on the issue number and type (`git checkout -b issue-name`)
 4. Evaluate and stage the changes you want to commit (`git add -i`)
@@ -178,4 +178,4 @@ Distributed under the MIT license. See [LICENSE](LICENSE.md) for more informatio
 For your contribution, please make sure you follow the [STYLEGUIDE](STYLEGUIDE.md) before creating the Pull Request.
 
 <!-- Markdown link & img dfn's -->
-[python_code_quality_docs]: https://claasrostock.github.io/python-code-quality/README.html
+[python_code_quality_docs]: https://ClaasRostock.github.io/python-code-quality/README.html

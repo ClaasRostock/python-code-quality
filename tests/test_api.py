@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from mypackage.api import MyPackageProcess, run
+from python_code_quality.api import MyPackageProcess, run
 
 
 def test_file_not_found_exception() -> None:
@@ -27,7 +27,7 @@ def test_run_with_option(caplog: pytest.LogCaptureFixture) -> None:
     # Prepare
     config_file = Path("test_config_file")
     log_level_expected = "INFO"
-    log_message_expected = "option is True. mypackage process will do something differently."
+    log_message_expected = "option is True. python-code-quality process will do something differently."
     caplog.clear()
     # Execute
     run(config_file=config_file, option=True)

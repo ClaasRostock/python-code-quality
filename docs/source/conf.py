@@ -66,10 +66,10 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_title = f"mypackage {release}"
+html_title = f"python-code-quality {release}"
 html_theme = "furo"
 html_static_path = ["_static"]
-html_logo = "_static/mypackage.svg"
+html_logo = "_static/python_code_quality.svg"
 autodoc_default_options = {
     "member-order": "groupwise",
     "undoc-members": True,
