@@ -25,7 +25,7 @@ packages = [
 
 [project]
 name = "python-code-quality"
-version = "0.1.0"
+version = "0.2.0"
 description = "demo code for the Code Quality in Python talk."
 readme = "README.md"
 requires-python = ">= 3.10, < 3.14"
