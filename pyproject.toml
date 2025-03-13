@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist]
 only-include = [
-    "src/python_code_quality",
+    "src/mypackage",
     "tests",
     ".coveragerc",
     ".editorconfig",
@@ -20,7 +20,7 @@ only-include = [
 
 [tool.hatch.build.targets.wheel]
 packages = [
-    "src/python_code_quality",
+    "src/mypackage",
 ]
 
 [project]
@@ -98,7 +98,7 @@ native-tls = true
 
 
 [project.scripts]
-python-code-quality = "python_code_quality.cli.__main__:main"
+mypackage = "mypackage.cli.__main__:main"
 
 
 [tool.mypy]
