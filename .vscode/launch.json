@@ -46,11 +46,11 @@
             "justMyCode": true,
         },
         {
-            "name": "python_code_quality test_cli",
+            "name": "mypackage test_cli",
             "type": "debugpy",
             "request": "launch",
             "cwd": "${workspaceFolder}\\tests",
-            "program": "${workspaceFolder}\\src\\python_code_quality\\cli\\python_code_quality.py",
+            "program": "${workspaceFolder}\\src\\mypackage\\cli\\mypackage.py",
             "args": [
                 "test_config_file",
                 "--run",
