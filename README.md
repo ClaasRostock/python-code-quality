@@ -19,13 +19,13 @@ pip install python-code-quality
 API:
 
 ```py
-from python_code_quality import ...
+from mypackage import ...
 ```
 
 CLI:
 
 ```sh
-python-code-quality ...
+mypackage ...
 ```
 
 _For more examples and usage, please refer to python-code-quality's [documentation][python_code_quality_docs]._
