@@ -1,0 +1,55 @@
+<<<<<<< Updated upstream
+Value,Variable
+python-code-quality,PackageNameDashed
+PythonCodeQuality,PackageNameCapitalized
+claasrostock,GitHubOrganisation
+,SubPackage1Name
+,Module1Name
+,SubPackage2Name
+,Module2Name
+Claas Rostock,Author1Name
+claas.rostock@dnv.com,Author1Email
+https://www.linkedin.com/in/claasrostock/?locale=en_US,Author1LinkedIn
+,Author2Name
+,Author2Email
+,Author2LinkedIn
+,Author3Name
+,Author3Email
+,Author3LinkedIn
+Claas Rostock,Maintainer1Name
+claas.rostock@dnv.com,Maintainer1Email
+https://www.linkedin.com/in/claasrostock/?locale=en_US,Maintainer1LinkedIn
+,Maintainer2Name
+,Maintainer2Email
+,Maintainer2LinkedIn
+Python,Keyword1
+Code,Keyword2
+Quality,Keyword3
+=======
+Variable,Value
+PackageNameDashed,python-code-quality
+PackageNameCapitalized,PythonCodeQuality
+GitHubOrganisation,claasrostock
+SubPackage1Name,
+Module1Name,
+SubPackage2Name,
+Module2Name,
+Author1Name,Claas Rostock
+Author1Email,claas.rostock@dnv.com
+Author1LinkedIn,https://www.linkedin.com/in/claasrostock/?locale=en_US
+Author2Name,
+Author2Email,
+Author2LinkedIn,
+Author3Name,
+Author3Email,
+Author3LinkedIn,
+Maintainer1Name,Claas Rostock
+Maintainer1Email,claas.rostock@dnv.com
+Maintainer1LinkedIn,https://www.linkedin.com/in/claasrostock/?locale=en_US
+Maintainer2Name,
+Maintainer2Email,
+Maintainer2LinkedIn,
+Keyword1,Python
+Keyword2,Code
+Keyword3,Quality
+>>>>>>> Stashed changes
