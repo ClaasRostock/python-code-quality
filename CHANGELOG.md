@@ -7,7 +7,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 -/-
 
-## [0.2.0] - 2025-02-10
+
+## [0.2.0] - 2025-03-13
 
 ### Changed
 * GitHub workflows: Disabled cache by default, as `uv.lock` does not get committed by default. <br>
@@ -47,6 +48,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * Updated to upload-artifact@v4  (from upload-artifact@v3)
 * Updated to download-artifact@v4  (from download-artifact@v3)
 
+
 ## [0.1.0] - 2023-02-27
 
 * Initial release
@@ -62,6 +64,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 
 <!-- Markdown link & img dfn's -->
-[unreleased]: https://github.com/ClaasRostock/python_code_quality/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/ClaasRostock/python_code_quality/releases/tag/v0.1.0
-[python_code_quality]: https://github.com/ClaasRostock/python_code_quality
+[unreleased]: https://github.com/ClaasRostock/python-code-quality/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/ClaasRostock/python-code-quality/releases/tag/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/ClaasRostock/python-code-quality/releases/tag/v0.1.0
+[python_code_quality]: https://github.com/ClaasRostock/python-code-quality
