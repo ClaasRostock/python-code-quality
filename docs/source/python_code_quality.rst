@@ -9,8 +9,6 @@ Subpackages
    :template: custom-module.rst
    :recursive:
 
-   python_code_quality.subpackage1
-   python_code_quality.subpackage2
    python_code_quality.utils
 
 

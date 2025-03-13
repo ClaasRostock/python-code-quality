@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""python-code-quality command line interface."""
+"""python_code_quality command line interface."""
 
 import argparse
 import logging

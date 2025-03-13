@@ -1,1 +1,1 @@
-"""Utilities for python-code-quality."""
+"""Utilities for python_code_quality."""
