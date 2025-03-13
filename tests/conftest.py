@@ -4,8 +4,6 @@ from pathlib import Path
 from shutil import rmtree
 
 import pytest
-import torch
-import torch.cuda
 
 
 @pytest.fixture(scope="package", autouse=True)

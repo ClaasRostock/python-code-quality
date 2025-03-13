@@ -1,11 +1,11 @@
-from somewhere_deep_in_an_external_package import Line, Plot
+from .somewhere_deep_in_an_external_package import Line, Plot
 
 
-def draw(p: Plot):
+def draw(p: Plot) -> None:
     p.draw()
     return
 
 
 def get_l_from_p(p: Plot) -> Line:
-    result: Line = p.L[0]  # type: ignore
+    result: Line = p.L[0]  # pyright: ignore[reportUnknownMemberType]
     return result

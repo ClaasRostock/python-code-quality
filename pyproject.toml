@@ -109,10 +109,20 @@ mypy_path = "stubs"
 files = [
     "src",
     "tests",
-    "demos",
+    # "demos",
 ]
 exclude = [
-    "^src/folder_to_be_excluded/",
+    "^src/mypackage/somewhere_deep_in_an_external_package.py",
+    "^src/mypackage/demo_type_hints_and_naming_01.py",
+    "^src/mypackage/demo_type_hints_and_naming.py",
+    "^src/mypackage/demo_duck_typing_01.py",
+    "^src/mypackage/demo_duck_typing.py",
+    "^src/mypackage/demo_comments_and_docstrings_01.py",
+    "^src/mypackage/demo_comments_and_docstrings_02.py",
+    "^src/mypackage/demo_comments_and_docstrings_03.py",
+    "^src/mypackage/demo_comments_and_docstrings.py",
+    "^src/mypackage/demo_dynamic_typing_01.py",
+    "^src/mypackage/demo_dynamic_typing.py",
 ]
 check_untyped_defs = true
 disable_error_code = [
@@ -129,7 +139,15 @@ include = [
     "demos",
 ]
 exclude = [
-    "src/folder_to_be_excluded",
+    "src/mypackage/somewhere_deep_in_an_external_package.py",
+    "src/mypackage/demo_type_hints_and_naming_01.py",
+    "src/mypackage/demo_type_hints_and_naming.py",
+    "src/mypackage/demo_duck_typing_01.py",
+    "src/mypackage/demo_duck_typing.py",
+    "src/mypackage/demo_comments_and_docstrings_01.py",
+    "src/mypackage/demo_comments_and_docstrings_02.py",
+    "src/mypackage/demo_comments_and_docstrings_03.py",
+    "src/mypackage/demo_comments_and_docstrings.py",
 ]
 
 typeCheckingMode = "basic"

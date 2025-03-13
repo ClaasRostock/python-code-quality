@@ -4,7 +4,10 @@ exclude = [
     "dist",
     "*cache",
     "**/__pycache__",
-    "src/folder_to_be_excluded",
+    "src/mypackage/somewhere_deep_in_an_external_package.py",
+    "src/mypackage/demo_type_hints_and_naming_01.py",
+    "src/mypackage/demo_type_hints_and_naming.py",
+    "src/mypackage/demo_duck_typing_01.py",
 ]
 src = [
     "src",
@@ -21,6 +24,16 @@ select = [
 ]
 ignore = [
     # Ruff lint rules temporarily ignored, but which should be reactivated and resolved in the future.
+    "D100",    # Missing docstring in public module
+    "D101",    # Missing docstring in public class
+    "D102",    # Missing docstring in public method
+    "D103",    # Missing docstring in public function
+    "T201",    # `print` found
+    "PLR2004", # Magic value used in comparison
+    "PERF401", # Use a list comprehension to create a transformed list
+    "ANN001",  # Missing type annotation for function argument {name}
+    "ANN201",  # Missing return type annotation for public function
+    "N806",    # Variable in function should be lowercase
 
     # Ruff lint rules considered as too strict and hence ignored
     "FIX002",  # Line contains TODO, consider resolving the issue
