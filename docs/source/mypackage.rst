@@ -9,6 +9,8 @@ Subpackages
    :template: custom-module.rst
    :recursive:
 
+   mypackage.subpackage1
+   mypackage.subpackage2
    mypackage.utils
 
 

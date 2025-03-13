@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path("../../src").absolute()))
 
 
 # -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "python-code-quality"
 copyright = "2025, Claas Rostock"
