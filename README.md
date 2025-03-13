@@ -163,11 +163,11 @@ Claas Rostock - [@LinkedIn](https://www.linkedin.com/in/claasrostock/?locale=en_
 
 Distributed under the MIT license. See [LICENSE](LICENSE.md) for more information.
 
-[https://github.com/ClaasRostock/python_code_quality](https://github.com/ClaasRostock/python_code_quality)
+[https://github.com/ClaasRostock/](https://github.com/ClaasRostock/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/ClaasRostock/python_code_quality/fork>)
+1. Fork it (<https://github.com/ClaasRostock//fork>)
 2. Create an issue in your GitHub repo
 3. Create your branch based on the issue number and type (`git checkout -b issue-name`)
 4. Evaluate and stage the changes you want to commit (`git add -i`)
