@@ -115,16 +115,16 @@ files = [
 ]
 exclude = [
     "src/python_code_quality/somewhere_deep_in_an_external_package.py",
-    "^src/python_code_quality/demo_type_hints_and_naming_01.py",
-    "^src/python_code_quality/demo_type_hints_and_naming.py",
-    "^src/python_code_quality/demo_duck_typing_01.py",
-    "^src/python_code_quality/demo_duck_typing.py",
-    "^src/python_code_quality/demo_comments_and_docstrings_01.py",
-    "^src/python_code_quality/demo_comments_and_docstrings_02.py",
-    "^src/python_code_quality/demo_comments_and_docstrings_03.py",
-    "^src/python_code_quality/demo_comments_and_docstrings.py",
-    "^src/python_code_quality/demo_dynamic_typing_01.py",
-    "^src/python_code_quality/demo_dynamic_typing.py",
+    "src/python_code_quality/demo_type_hints_and_naming_01.py",
+    "src/python_code_quality/demo_type_hints_and_naming.py",
+    "src/python_code_quality/demo_duck_typing_01.py",
+    "src/python_code_quality/demo_duck_typing.py",
+    "src/python_code_quality/demo_comments_and_docstrings_01.py",
+    "src/python_code_quality/demo_comments_and_docstrings_02.py",
+    "src/python_code_quality/demo_comments_and_docstrings_03.py",
+    "src/python_code_quality/demo_comments_and_docstrings.py",
+    "src/python_code_quality/demo_dynamic_typing_01.py",
+    "src/python_code_quality/demo_dynamic_typing.py",
 ]
 check_untyped_defs = true
 disable_error_code = [
