@@ -58,7 +58,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    "dictIO>=0.4.1",
+    "dictIO>=0.4.2",
 ]
 
 [project.urls]
