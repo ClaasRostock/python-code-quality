@@ -1,5 +1,5 @@
 title: python-code-quality
-version: 0.2.0
+version: 0.2.1
 abstract: >-
     demo code for the Code Quality in Python talk.
 type: software
@@ -10,21 +10,11 @@ authors:
       city: Høvik
       country: NO
       website: 'https://www.dnv.com/'
-    - given-names: Author
-      family-names: One
+    - given-names: Claas
+      family-names: Rostock
       affiliation: DNV
       email: claas.rostock@dnv.com
       website: 'https://www.linkedin.com/in/claasrostock/?locale=en_US'
-    - given-names: Author
-      family-names: Two
-      affiliation: DNV
-      email:
-      website: ''
-    - given-names: Author
-      family-names: Three
-      affiliation: DNV
-      email:
-      website: ''
 keywords:
     - Python
     - Code
