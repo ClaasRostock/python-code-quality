@@ -107,9 +107,7 @@ python-code-quality = "python_code_quality.cli.__main__:main"
 
 
 [tool.mypy]
-plugins = [
-    "numpy.typing.mypy_plugin",
-]
+plugins = []
 mypy_path = "stubs"
 files = [
     "src",
