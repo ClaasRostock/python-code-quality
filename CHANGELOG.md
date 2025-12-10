@@ -8,7 +8,7 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 * -/-
 
 
-## [0.2.1] - 2025-12-09
+## [0.2.1] - 2025-12-10
 
 ### Dependencies
 * Updated to ruff>=0.14.3  (from ruff>=0.9.5)
