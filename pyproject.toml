@@ -23,6 +23,9 @@ packages = [
     "src/python_code_quality",
 ]
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [project]
 name = "python-code-quality"
 version = "0.2.1"
