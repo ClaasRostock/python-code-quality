@@ -104,7 +104,7 @@ def main() -> None:
         return
 
     logger.info(
-        f"Start python-code-quality.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"  # noqa: E501
+        f"Start python-code-quality.py with following arguments:\n\t config_file: \t{config_file}\n\t option: \t\t\t{option}\n"
     )
 
     # Invoke API
