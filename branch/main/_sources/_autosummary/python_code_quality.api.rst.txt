@@ -1,0 +1,22 @@
+﻿python\_code\_quality.api
+=========================
+
+.. automodule:: python_code_quality.api
+   :members:
+   :exclude-members: MyPackageProcess,
+   
+
+
+   
+   .. rubric:: Functions
+   .. autosummary::
+   
+      run
+   
+   .. rubric:: Classes
+   .. autosummary::
+      :toctree:
+      :template: custom-class.rst
+   
+      MyPackageProcess
+   
